@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0">
+	<display-name>Servlet</display-name>
+	
+	<filter>
+		<filter-name>TestFilter</filter-name>
+		<filter-class>com.geekxia.TestFilter</filter-class>
+		<init-param>
+			<param-name>Site</param-name>
+			<param-value>geekxia.cn</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>TestFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	
+	<filter>
+		<filter-name>FilterCounter</filter-name>
+		<filter-class>com.geekxia.FilterCounter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>FilterCounter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>FormTest</servlet-name>
+		<servlet-class>
+			com.geekxia.FormTest
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FormTest</servlet-name>
+		<url-pattern>/FormTest</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>HelloWorld</servlet-name>
+		<servlet-class>
+			com.geekxia.HelloWorld
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HelloWorld</servlet-name>
+		<url-pattern>/HelloWorld</url-pattern>
+	</servlet-mapping>
+	
+
+	
+	
+	<servlet>
+		<servlet-name>ErrorHandle</servlet-name>
+		<servlet-class>com.geekxia.ErrorHandle</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ErrorHandle</servlet-name>
+		<url-pattern>/ErrorHandle</url-pattern>
+	</servlet-mapping>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/ErrorHandle</location>
+	</error-page>
+	<error-page>
+		<exception-type>javax.servlet.ServletException</exception-type>
+		<location>/ErrorHandle</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/ErrorHandle</location>
+	</error-page>
+	
+	
+	<servlet>
+		<servlet-name>TestCookie</servlet-name>
+		<servlet-class>
+			com.geekxia.TestCookie
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TestCookie</servlet-name>
+		<url-pattern>/TestCookie</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TestSession</servlet-name>
+		<servlet-class>
+			com.geekxia.TestSession
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestSession</servlet-name>
+		<url-pattern>/TestSession</url-pattern>
+	</servlet-mapping>
+	
+	
+	<session-config>
+		<session-timeout>15</session-timeout>
+	</session-config>
+	
+	<servlet>
+		<servlet-name>DatabaseAccess</servlet-name>
+		<servlet-class>
+			com.geekxia.DatabaseAccess
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DatabaseAccess</servlet-name>
+		<url-pattern>/DatabaseAccess</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UploadFile</servlet-name>
+		<servlet-class>
+			com.geekxia.UploadFile
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UploadFile</servlet-name>
+		<url-pattern>/UploadFile</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TestDate</servlet-name>
+		<servlet-class>
+			com.geekxia.TestDate
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestDate</servlet-name>
+		<url-pattern>/TestDate</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>TestRedirect</servlet-name>
+		<servlet-class>
+			com.geekxia.TestRedirect
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestRedirect</servlet-name>
+		<url-pattern>/TestRedirect</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Counter</servlet-name>
+		<servlet-class>
+			com.geekxia.Counter
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Counter</servlet-name>
+		<url-pattern>/Counter</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>AutoRefresh</servlet-name>
+		<servlet-class>
+			com.geekxia.AutoRefresh
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AutoRefresh</servlet-name>
+		<url-pattern>/AutoRefresh</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>Email</servlet-name>
+		<servlet-class>
+			com.geekxia.Email
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Email</servlet-name>
+		<url-pattern>/Email</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>GetLocale</servlet-name>
+		<servlet-class>
+			com.geekxia.GetLocale
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetLocale</servlet-name>
+		<url-pattern>/GetLocale</url-pattern>
+	</servlet-mapping>
+	
+</web-app>

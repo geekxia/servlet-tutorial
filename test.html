@@ -1,0 +1,30 @@
+<html>
+	<head><meta charset='UTF-8' /></head>
+	<body>
+		<form action='/test' method='GET'>
+			<input type='text' name='name' />
+			<br/>
+			<input type='text' name='url' />
+			<br/>
+			<input type='submit' value='submit' />
+		</form>
+		
+		<hr/>
+		<form action='/test' method='POST'>
+			<input type='text' name='name' />
+			<br/>
+			<input type='text' name='url' />
+			<br/>
+			<input type='submit' value='submit' />
+		</form>
+		
+		<hr/>
+		
+		<form method='POST' action='/UploadFile' enctype='multipart/form-data'>
+			<input type='file' name='file' />
+			<input type='submit' value='submit' />
+		</form>
+		
+		<img src='/upload/EvaTsai.png' alt='img' />
+	</body>
+</html>
